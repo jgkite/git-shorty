@@ -61,7 +61,7 @@ KNOWN_ALIAS="anything"
 ```bash
 $ git-shorty on
 Turning aliases on...
-Git aliases are enabled. Go shorty!
+Git aliases are enabled.
 ```
 
 ### Turn aliases off:
@@ -69,5 +69,5 @@ Git aliases are enabled. Go shorty!
 ```bash
 $ git-shorty off
 Turning aliases off...
-Git aliases are now disabled. Get your type on!
+Git aliases are now disabled.
 ```
