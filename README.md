@@ -44,6 +44,16 @@ Remember to source the file. E.g.
 source ~/.zshrc
 ```
 
+### Gotchas!!
+
+This script assumes one of your git aliases is `git st`. If it's not,
+it's simple enough to switch the `aliases_are_enabled()` check to use
+an alias you *do*  have. Just change `KNOWN_ALIAS` to something else.
+
+```bash
+KNOWN_ALIAS="anything"
+```
+
 ## Usage
 
 ### Turn shortcuts (aliases) on:

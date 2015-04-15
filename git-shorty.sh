@@ -1,13 +1,14 @@
 #!/bin/bash
 
 SAY_WHEN_ENABLED="Saving keystrokes, one commit at a time."
-SAY_WHEN_DISABLED="Take the long way home."
+SAY_WHEN_DISABLED="You must get paid by the keystroke."
+KNOWN_ALIAS="st"
 
 COMMAND="$1"
 
 aliases_are_enabled()
 {
-  if git config --global --get alias.st > /dev/null; then
+  if git config --global --get alias.$KNOWN_ALIAS > /dev/null; then
     return 0 # true
   else
     return 1 # false
