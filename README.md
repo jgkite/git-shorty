@@ -35,7 +35,7 @@ sake of example, we'll use `~/scripts`.
 Add an alias to your shell "rc file" (`.bashrc`, `.zshrc`, etc):
 
 ```bash
-alias git-shorty='~/git-shorty.sh'
+alias git-shorty='~/scripts/git-shorty.sh'
 ```
 
 Remember to source the file. E.g.
