@@ -44,9 +44,12 @@ Remember to source the file. E.g.
 source ~/.zshrc
 ```
 
-### Gotchas!!
+### Assumptions
 
-This script assumes one of your git aliases is `git st`. If it's not,
+This script assumes that you have an aliases section in your global
+`.gitconfig`. (If you don't, you can steal mine below).
+
+It also assumes that one of your git aliases is `git st`. If it's not,
 it's simple enough to switch the `aliases_are_enabled()` check to use
 an alias you *do*  have. Just change `KNOWN_ALIAS` to something else.
 
@@ -70,4 +73,28 @@ Git aliases are enabled.
 $ git-shorty off
 Turning aliases off...
 Git aliases are now disabled.
+```
+
+## Sample aliases
+
+Here are all of the aliases from my personal `.gitconfig` if you're
+looking for a starting place. :)
+
+```
+[alias]
+  st = status
+  ci = commit
+  br = branch
+  co = checkout
+  df = diff
+  dc = diff --cached
+  latest = "for-each-ref --sort=-committerdate --format='%(committerdate:short) %(refname:short)'"
+  lg = log -p
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  ls = ls-files
+  whoami = var GIT_COMMITTER_IDENT
+  # Show files ignored by git:
+  ign = ls-files -o -i --exclude-standard
+  exclude = !sh -c 'echo "$1" >> .git/info/exclude' -
 ```
